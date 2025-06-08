@@ -39,6 +39,14 @@ function Sidebar() {
             Credit Card
           </li>
         </Link>
+        <Link to="/stopwatch">
+          <li
+            className="p-2 rounded-lg hover:bg-white/20"
+            onClick={() => setToggle(false)}
+          >
+            Stopwatch
+          </li>
+        </Link>
       </ul>
     </aside>
   );

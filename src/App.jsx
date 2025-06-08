@@ -3,6 +3,7 @@ import Counter from "./project/Counter";
 import CreditCard from "./project/CreditCard";
 import Home from "./components/Home";
 import Sidebar from "./components/Sidebar";
+import Stopwatch from "./project/Stopwatch";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/counter" element={<Counter />}></Route>
         <Route path="/creditcard" element={<CreditCard />}></Route>
+        <Route path="/stopwatch" element={<Stopwatch />}></Route>
       </Routes>
     </>
   );
