@@ -4,6 +4,7 @@ import CreditCard from "./project/CreditCard";
 import Home from "./components/Home";
 import Sidebar from "./components/Sidebar";
 import Stopwatch from "./project/Stopwatch";
+import TextoverHill from "./project/TextoverHill";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/counter" element={<Counter />}></Route>
         <Route path="/creditcard" element={<CreditCard />}></Route>
         <Route path="/stopwatch" element={<Stopwatch />}></Route>
+        <Route path="/textoverhill" element={<TextoverHill />}></Route>
       </Routes>
     </>
   );

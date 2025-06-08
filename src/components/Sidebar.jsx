@@ -20,7 +20,7 @@ function Sidebar() {
         <Link to="/" onClick={() => setToggle(false)}>
           <img src={logo} alt="react logo" className="size-12 shrink-0" />
         </Link>
-        <h1 className="text-lg font-bold leading-6">Mini React Projects</h1>
+        <h1 className="text-lg font-bold leading-6  ">Mini React Projects</h1>
       </div>
       <ul className="h-full">
         <Link to="/counter">
@@ -45,6 +45,14 @@ function Sidebar() {
             onClick={() => setToggle(false)}
           >
             Stopwatch
+          </li>
+        </Link>
+        <Link to="/textoverhill">
+          <li
+            className="p-2 rounded-lg hover:bg-white/20"
+            onClick={() => setToggle(false)}
+          >
+            Text Over Hill Animation
           </li>
         </Link>
       </ul>
