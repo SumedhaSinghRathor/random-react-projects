@@ -1,6 +1,8 @@
 import React from "react";
 import img1 from "../assets/img1.svg";
 
+// https://www.youtube.com/watch?v=gvO3JTCevKc
+
 function CreditCard() {
   return (
     <section

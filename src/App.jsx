@@ -5,11 +5,13 @@ import Home from "./components/Home";
 import Sidebar from "./components/Sidebar";
 import Stopwatch from "./project/Stopwatch";
 import TextoverHill from "./project/TextoverHill";
+import Link from "./components/Link";
 
 function App() {
   return (
     <>
       <Sidebar />
+      <Link />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/counter" element={<Counter />}></Route>

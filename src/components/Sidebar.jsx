@@ -13,7 +13,7 @@ function Sidebar() {
     >
       <box-icon
         name="menu"
-        className="text-white size-12 rounded-r-lg bg-blue-700 fixed top-12 left-64"
+        className="text-white size-12 rounded-r-lg bg-blue-700 fixed top-12 left-64 cursor-pointer"
         onClick={() => setToggle(!toggle)}
       ></box-icon>
       <div className="flex gap-4 items-center">
