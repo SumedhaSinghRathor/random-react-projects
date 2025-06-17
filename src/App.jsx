@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar";
 import Stopwatch from "./project/Stopwatch";
 import TextoverHill from "./project/TextoverHill";
 import Link from "./components/Link";
+import Vercel from "./project/Vercel/Vercel";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/creditcard" element={<CreditCard />}></Route>
         <Route path="/stopwatch" element={<Stopwatch />}></Route>
         <Route path="/textoverhill" element={<TextoverHill />}></Route>
+        <Route path="/vercel" element={<Vercel />}></Route>
       </Routes>
     </>
   );

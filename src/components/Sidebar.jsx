@@ -55,6 +55,14 @@ function Sidebar() {
             Text Over Hill Animation
           </li>
         </Link>
+        <Link to="/vercel">
+          <li
+            className="p-2 rounded-lg hover:bg-white/20"
+            onClick={() => setToggle(false)}
+          >
+            Vercel Projects
+          </li>
+        </Link>
       </ul>
     </aside>
   );
