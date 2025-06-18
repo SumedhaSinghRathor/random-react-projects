@@ -3,6 +3,29 @@ import logo from "/react.svg";
 import { Link } from "react-router-dom";
 
 function Sidebar() {
+  const projects = [
+    {
+      to: "/counter",
+      content: "Counter",
+    },
+    {
+      to: "/creditcard",
+      content: "Credit Card",
+    },
+    {
+      to: "/stopwatch",
+      content: "Stopwatch",
+    },
+    {
+      to: "/textoverhill",
+      content: "Text Over Hill Animation",
+    },
+    {
+      to: "/vercel",
+      content: "Vercel Projects",
+    },
+  ];
+
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -23,46 +46,16 @@ function Sidebar() {
         <h1 className="text-lg font-bold leading-6  ">Mini React Projects</h1>
       </div>
       <ul className="h-full">
-        <Link to="/counter">
-          <li
-            className="p-2 rounded-lg hover:bg-white/20"
-            onClick={() => setToggle(false)}
-          >
-            Counter
-          </li>
-        </Link>
-        <Link to="/creditcard">
-          <li
-            className="p-2 rounded-lg hover:bg-white/20"
-            onClick={() => setToggle(false)}
-          >
-            Credit Card
-          </li>
-        </Link>
-        <Link to="/stopwatch">
-          <li
-            className="p-2 rounded-lg hover:bg-white/20"
-            onClick={() => setToggle(false)}
-          >
-            Stopwatch
-          </li>
-        </Link>
-        <Link to="/textoverhill">
-          <li
-            className="p-2 rounded-lg hover:bg-white/20"
-            onClick={() => setToggle(false)}
-          >
-            Text Over Hill Animation
-          </li>
-        </Link>
-        <Link to="/vercel">
-          <li
-            className="p-2 rounded-lg hover:bg-white/20"
-            onClick={() => setToggle(false)}
-          >
-            Vercel Projects
-          </li>
-        </Link>
+        {projects.map((project) => (
+          <Link to={project.to}>
+            <li
+              className="p-2 rounded-lg hover:bg-white/20"
+              onClick={() => setToggle(false)}
+            >
+              {project.content}
+            </li>
+          </Link>
+        ))}
       </ul>
     </aside>
   );
