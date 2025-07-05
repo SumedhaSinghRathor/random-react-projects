@@ -7,6 +7,7 @@ import Stopwatch from "./project/Stopwatch";
 import TextoverHill from "./project/TextoverHill";
 import Link from "./components/Link";
 import Vercel from "./project/Vercel/Vercel";
+import MusicPlayer from "./project/Music Player/MusicPlayer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/counter" element={<Counter />}></Route>
         <Route path="/creditcard" element={<CreditCard />}></Route>
+        <Route path="/music-player" element={<MusicPlayer />} />
         <Route path="/stopwatch" element={<Stopwatch />}></Route>
         <Route path="/textoverhill" element={<TextoverHill />}></Route>
         <Route path="/vercel" element={<Vercel />}></Route>

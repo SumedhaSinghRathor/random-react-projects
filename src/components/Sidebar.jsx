@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import logo from "/react.svg";
 import { Link } from "react-router-dom";
 
@@ -11,6 +11,10 @@ function Sidebar() {
     {
       to: "/creditcard",
       content: "Credit Card",
+    },
+    {
+      to: "/music-player",
+      content: "Music Player",
     },
     {
       to: "/stopwatch",
@@ -34,11 +38,10 @@ function Sidebar() {
         toggle ? "translate-x-0" : "-translate-x-64"
       }`}
     >
-      <box-icon
-        name="menu"
-        className="text-white size-12 rounded-r-lg bg-blue-700 fixed top-12 left-64 cursor-pointer"
+      <i
+        className="bx bx-menu text-5xl text-white size-12 rounded-r-lg bg-blue-700 fixed top-12 left-64 cursor-pointer"
         onClick={() => setToggle(!toggle)}
-      ></box-icon>
+      ></i>
       <div className="flex gap-4 items-center">
         <Link to="/" onClick={() => setToggle(false)}>
           <img src={logo} alt="react logo" className="size-12 shrink-0" />
