@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Counter from "./project/Counter";
 import CreditCard from "./project/CreditCard";
+import Fav from "./project/Favorite/Fav";
 import Home from "./components/Home";
 import Sidebar from "./components/Sidebar";
 import Stopwatch from "./project/Stopwatch";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/counter" element={<Counter />}></Route>
         <Route path="/creditcard" element={<CreditCard />}></Route>
+        <Route path="/fav" element={<Fav />}></Route>
         <Route path="/music-player" element={<MusicPlayer />} />
         <Route path="/stopwatch" element={<Stopwatch />}></Route>
         <Route path="/textoverhill" element={<TextoverHill />}></Route>

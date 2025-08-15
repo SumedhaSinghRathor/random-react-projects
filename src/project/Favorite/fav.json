@@ -1,0 +1,70 @@
+[
+  {
+    "type": "Book",
+    "name": "Wuthering Heights",
+    "by": "Emily Brontë",
+    "released": 1847
+  },
+  {
+    "type": "Manga",
+    "name": "The Rose of Versailles",
+    "by": "Riyoko Ikeda",
+    "released": 1973
+  },
+  {
+    "type": "Album",
+    "name": "A Day at the Races",
+    "by": "Queen",
+    "released": 1976
+  },
+  {
+    "type": "Movie",
+    "name": "The Dark Knight",
+    "by": "Christoper Nolan",
+    "released": 2008
+  },
+  {
+    "type": "Manga",
+    "name": "Yona of the Dawn",
+    "by": "Mizuho Kusanagi",
+    "released": 2009
+  },
+  {
+    "type": "TV Show",
+    "name": "Couple of Mirrors",
+    "by": "",
+    "released": 2021
+  },
+  {
+    "type": "Manga",
+    "name": "Requiem of the Rose King",
+    "by": "Aya Kanno",
+    "released": 2013
+  },
+  {
+    "type": "Book",
+    "name": "A Darker Shade of Magic",
+    "by": "Victoria Schwab",
+    "released": 2015
+  },
+  {
+    "type": "Book",
+    "name": "The Conqueror's Saga",
+    "by": "Kiersten White",
+    "released": 2016
+  },
+  {
+    "type": "TV Show",
+    "name": "Interview with the Vampire",
+    "by": "Rolin Jones",
+    "released": 2022
+  },
+  {
+    "type": "Book",
+    "name": "The Lunar Chronicles",
+    "by": "Marissa Meyers",
+    "released": 2012
+  },
+  { "type": "Album", "name": "Renaissance", "by": "Beyoncé", "released": 2022 },
+  { "type": "Album", "name": "She Is", "by": "Jonghyun", "released": 2016 }
+]

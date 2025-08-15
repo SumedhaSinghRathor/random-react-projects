@@ -12,6 +12,7 @@ function Sidebar() {
       to: "/creditcard",
       content: "Credit Card",
     },
+    { to: "/fav", content: "Favorite Stuff" },
     {
       to: "/music-player",
       content: "Music Player",
