@@ -1,6 +1,7 @@
 import { useState } from "react";
 import info from "./fav.json";
 import Info from "./Info";
+import { AnimatePresence } from "framer-motion";
 
 function Fav() {
   const [curr, setCurr] = useState(0);
@@ -19,11 +20,11 @@ function Fav() {
     >
       <div className="absolute flex items-center justify-between w-xl p-4">
         <i
-          className="text-4xl bx bx-chevron-left rounded-full shadow-pink-600 bg-pink-400 text-gray-800 hover:bg-pink-500"
+          className="text-4xl bx bx-chevron-left rounded-full shadow-pink-600 bg-pink-400 text-black hover:bg-pink-500"
           onClick={prev}
         />
         <i
-          className="text-4xl bx bx-chevron-right rounded-full shadow-pink-600 bg-pink-400 text-gray-800 hover:bg-pink-500"
+          className="text-4xl bx bx-chevron-right rounded-full shadow-pink-600 bg-pink-400 text-black hover:bg-pink-500"
           onClick={next}
         />
       </div>
@@ -33,10 +34,9 @@ function Fav() {
           .map((item, index) => (
             <div
               key={index}
-              className="size-full flex flex-col justify-between text-center p-4 shrink-0 cursor-pointer"
+              className="size-full flex flex-col justify-between text-center p-4 shrink-0 cursor-pointer transition-transform duration-500"
               style={{
                 transform: `translateX(-${curr * 100}%)`,
-                transition: "transition 0.5s",
               }}
               onClick={() => {
                 setSelectedItem(item);
@@ -44,15 +44,13 @@ function Fav() {
               }}
             >
               <div className="w-full flex justify-between items-center font-bold">
-                <p className="bg-pink-300 rounded-full px-0.5">#{index + 1}</p>
-                <p className="bg-pink-300 px-2 rounded-full hover:bg-pink-400">
-                  {item.type}
-                </p>
+                <p className="bg-pink-400 rounded-full px-0.5">#{index + 1}</p>
+                <p className="bg-pink-400 rounded-full px-2">{item.type}</p>
               </div>
-              <p>
-                <span className="text-3xl font-bold">{item.name}</span>{" "}
-                <span className="ml-1 text-md">({item.released})</span>
-              </p>
+              <div>
+                <p className="text-3xl font-bold">{item.name}</p>
+                <p className="ml-1 text-md">({item.released})</p>
+              </div>
               <div>
                 <p>by</p>
                 <p className="text-2xl italic">{item.by}</p>
@@ -60,9 +58,11 @@ function Fav() {
             </div>
           ))}
       </div>
-      {showModal && (
-        <Info onClose={() => setShowModal(false)} item={selectedItem} />
-      )}
+      <AnimatePresence>
+        {showModal && (
+          <Info onClose={() => setShowModal(false)} item={selectedItem} />
+        )}
+      </AnimatePresence>
     </section>
   );
 }

@@ -3,68 +3,91 @@
     "type": "Book",
     "name": "Wuthering Heights",
     "by": "Emily Brontë",
-    "released": 1847
+    "released": 1847,
+    "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1478641029i/32929156.jpg"
   },
   {
     "type": "Manga",
     "name": "The Rose of Versailles",
     "by": "Riyoko Ikeda",
-    "released": 1973
+    "released": 1973,
+    "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1359061890i/17283494.jpg"
   },
   {
     "type": "Album",
     "name": "A Day at the Races",
     "by": "Queen",
-    "released": 1976
+    "released": 1976,
+    "img": "https://upload.wikimedia.org/wikipedia/en/3/31/A_Day_at_the_Races_%28Queen%29.jpg"
   },
   {
     "type": "Movie",
     "name": "The Dark Knight",
-    "by": "Christoper Nolan",
-    "released": 2008
+    "by": "Christopher Nolan",
+    "released": 2008,
+    "img": "https://a.ltrbxd.com/resized/sm/upload/78/y5/zg/ej/oefdD26aey8GPdx7Rm45PNncJdU-0-2000-0-3000-crop.jpg?v=2d0ce4be25"
   },
   {
     "type": "Manga",
     "name": "Yona of the Dawn",
     "by": "Mizuho Kusanagi",
-    "released": 2009
+    "released": 2009,
+    "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1523507748i/39807046.jpg"
   },
   {
     "type": "TV Show",
     "name": "Couple of Mirrors",
     "by": "",
-    "released": 2021
+    "released": 2021,
+    "img": "https://i.mydramalist.com/pbL1r_4c.jpg?v=4  "
   },
   {
     "type": "Manga",
     "name": "Requiem of the Rose King",
     "by": "Aya Kanno",
-    "released": 2013
+    "released": 2013,
+    "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1606197173i/56028072.jpg"
   },
   {
     "type": "Book",
     "name": "A Darker Shade of Magic",
     "by": "Victoria Schwab",
-    "released": 2015
+    "released": 2015,
+    "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1400322851i/22055262.jpg"
   },
   {
     "type": "Book",
     "name": "The Conqueror's Saga",
     "by": "Kiersten White",
-    "released": 2016
+    "released": 2016,
+    "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1449153532i/27190613.jpg"
   },
   {
     "type": "TV Show",
     "name": "Interview with the Vampire",
     "by": "Rolin Jones",
-    "released": 2022
+    "released": 2022,
+    "img": "https://artworks.thetvdb.com/banners/v4/series/405535/posters/62dcee87bfdf3.jpg"
   },
   {
     "type": "Book",
     "name": "The Lunar Chronicles",
     "by": "Marissa Meyers",
-    "released": 2012
+    "released": 2012,
+    "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1507557775i/36381037.jpg"
   },
-  { "type": "Album", "name": "Renaissance", "by": "Beyoncé", "released": 2022 },
-  { "type": "Album", "name": "She Is", "by": "Jonghyun", "released": 2016 }
+  {
+    "type": "Album",
+    "name": "Renaissance",
+    "by": "Beyoncé",
+    "released": 2022,
+    "img": "https://upload.wikimedia.org/wikipedia/en/a/ad/Beyonc%C3%A9_-_Renaissance.png"
+  },
+  {
+    "type": "Album",
+    "name": "She Is",
+    "by": "Jonghyun",
+    "released": 2016,
+    "img": "https://upload.wikimedia.org/wikipedia/en/2/29/JonghyunSheIsAlbumCover.jpg"
+  }
 ]
