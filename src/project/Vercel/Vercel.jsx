@@ -1,74 +1,18 @@
-import stock from "../../assets/Mask group.ico";
-import react from "../../assets/react_icon_130845.ico";
-import player from "../../assets/ye old.ico";
-import quant from "../../assets/logo.ico";
-import ssr from "../../assets/Asset 1.ico";
-import pixel from "../../assets/favicon.ico";
-import cloud from "../../assets/cloud.png";
-import tvs from "../../assets/tvs.ico";
 import { useState } from "react";
+import projects from "./projects.js";
+import Extra from "./Extra.jsx";
 
 function Vercel() {
-  const projects = [
-    {
-      name: "stock-predictor",
-      href: "stock-predictor-three.vercel.app",
-      github: "Stock-Predictor",
-      img: stock,
-    },
-    {
-      name: "quant-sight",
-      href: "quant-sight.vercel.app",
-      github: "QuantSight",
-      img: quant,
-    },
-    {
-      name: "random-react-projects",
-      href: "random-react-projects.vercel.app",
-      github: "random-react-projects",
-      img: react,
-    },
-    {
-      name: "personal-music",
-      href: "personal-music.vercel.app",
-      github: "music-player",
-      img: player,
-    },
-    {
-      name: "personal-portfolio",
-      href: "sumedhasinghrathor.vercel.app",
-      github: "personal-portfolio",
-      img: ssr,
-    },
-    {
-      name: "pixel-pilot",
-      href: "pixel-pilot.vercel.app",
-      github: "pixel-pilot",
-      img: pixel,
-    },
-    {
-      name: "weather-app",
-      href: "sumedhasinghrathor-weatherdashboard.vercel.app",
-      github: "WeatherApp",
-      img: cloud,
-    },
-    {
-      name: "fetch-tv-shows",
-      href: "fetch-tv-shows.vercel.app",
-      github: "Fetch-TVShows",
-      img: tvs,
-    },
-  ];
-
   const [grid, setGrid] = useState(true);
   const [search, setSearch] = useState("");
+  const [selectExtra, setSelectExtra] = useState(null);
 
   return (
     <section
       className="w-screen h-screen p-2 bg-[#fffafa]"
       style={{ fontFamily: `"Geist", sans-serif` }}
     >
-      <h1 className="text-4xl text-center font-bold">Deployed Projects</h1>
+      <h1 className="text-4xl text-center font-bold">Potential Projects</h1>
       <br />
       <form className="w-full flex items-center gap-4 p-2 text-2xl">
         <input
@@ -92,7 +36,7 @@ function Vercel() {
           />
         </div>
         <div className="text-lg bg-black text-white py-1.5 px-3 rounded font-semibold cursor-pointer">
-          Add New
+          Analysis
         </div>
       </form>
       {grid ? (
@@ -103,8 +47,11 @@ function Vercel() {
                 ? item
                 : item.name.toLowerCase().includes(search);
             })
-            .map((project) => (
-              <div className="border-2 border-black/20 flex flex-col gap-4 p-4 rounded-lg">
+            .map((project, index) => (
+              <div
+                key={index}
+                className="border-2 border-black/20 flex flex-col gap-4 p-4 rounded-lg"
+              >
                 <div className="flex justify-between">
                   <div className="flex items-center gap-4">
                     <img
@@ -128,14 +75,22 @@ function Vercel() {
                       href={`https://github.dev/SumedhaSinghRathor/${project.github}`}
                       target="_blank"
                     >
-                      <i className="bx bx-code-alt rounded-full" />
+                      <i className="bx bx-code-alt rounded-full hover:bg-slate-500/20" />
                     </a>
-                    <i className="bx bx-dots-horizontal-rounded" />
+                    <i
+                      className={`bx bx-dots-horizontal-rounded rounded-full hover:bg-slate-500/20 cursor-pointer ${
+                        selectExtra === index ? "bg-slate-500/40" : ""
+                      }`}
+                      onClick={() =>
+                        setSelectExtra(selectExtra === index ? null : index)
+                      }
+                    />
                   </div>
                 </div>
                 <a
                   href={`https://github.com/SumedhaSinghRathor/${project.github}`}
                   target="_blank"
+                  className="w-fit rounded-full"
                 >
                   <div className="bg-gray-300 w-fit max-w-full font-semibold flex items-center gap-2 px-2 rounded-full">
                     <i className="bx bxl-github text-xl" />{" "}
@@ -187,6 +142,10 @@ function Vercel() {
             ))}
         </section>
       )}
+      <Extra
+        selectExtra={selectExtra === null ? null : projects[selectExtra]}
+        onClose={() => setSelectExtra(null)}
+      />
     </section>
   );
 }

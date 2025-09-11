@@ -35,7 +35,7 @@ function Sidebar() {
 
   return (
     <aside
-      className={`absolute w-3xs h-full flex flex-col gap-4 bg-blue-700 p-4 text-white rounded-r-lg transition-transform shadow-2xl ${
+      className={`fixed w-3xs h-full flex flex-col gap-4 bg-blue-700 p-4 text-white rounded-r-lg transition-transform shadow-2xl ${
         toggle ? "translate-x-0" : "-translate-x-64"
       }`}
     >
