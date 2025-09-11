@@ -9,11 +9,18 @@ function Vercel() {
   });
   const [search, setSearch] = useState("");
   const [selectExtra, setSelectExtra] = useState(null);
-  const [sortConfig, setSortConfig] = useState("none");
+  const [sortConfig, setSortConfig] = useState(() => {
+    const sortSaved = localStorage.getItem("sort");
+    return sortSaved ? JSON.parse(sortSaved) : "none";
+  });
 
   useEffect(() => {
     localStorage.setItem("gridView", JSON.stringify(grid));
   }, [grid]);
+
+  useEffect(() => {
+    localStorage.setItem("sort", JSON.stringify(sortConfig));
+  }, [sortConfig]);
 
   const toggleSort = () => {
     setSortConfig((prev) =>
@@ -77,6 +84,7 @@ function Vercel() {
         </div>
       </form>
       {grid ? (
+        // Grid View
         <section className="grid grid-cols-3 gap-4 p-2">
           {processedProjects.map((project, index) => (
             <div
@@ -137,11 +145,12 @@ function Vercel() {
           ))}
         </section>
       ) : (
+        // List View
         <section className="grid grid-cols-1 p-2">
           {processedProjects.map((project, index) => (
             <div
               key={index}
-              className={`flex justify-between items-center p-2 border border-black/30 rounded hover:bg-slate-500/20 cursor-pointer ${
+              className={`flex justify-between items-center p-2 border-b border-black/30 hover:bg-slate-500/20 cursor-pointer ${
                 selectExtra === index ? "bg-slate-500/30" : ""
               }`}
               onClick={() =>
