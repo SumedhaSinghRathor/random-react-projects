@@ -8,6 +8,7 @@ import cloud from "./assets/cloud.png";
 import tvs from "./assets/tvs.ico";
 import nkd from "./assets/nkd.ico";
 import quiz from "./assets/quiz.ico";
+import crud from "./assets/CRUD.ico";
 import SP1 from "./assets/thumbnails/Stock Predictor 1.png";
 import SP2 from "./assets/thumbnails/Stock Predictor 2.png";
 import SP3 from "./assets/thumbnails/Stock Predictor 3.png";
@@ -42,8 +43,25 @@ import NKD2 from "./assets/thumbnails/notes-ki-dukaan.vercel.app_home (1).png";
 import NKD3 from "./assets/thumbnails/notes-ki-dukaan.vercel.app_view.png";
 import NKD4 from "./assets/thumbnails/notes-ki-dukaan.vercel.app_view (1).png";
 import NKD5 from "./assets/thumbnails/notes-ki-dukaan.vercel.app_user.png";
+import CRUD1 from "./assets/thumbnails/nextjsmongodb-fullstack-blog.vercel.app_.png";
+import CRUD2 from "./assets/thumbnails/nextjsmongodb-fullstack-blog.vercel.app_ (1).png";
+import CRUD3 from "./assets/thumbnails/nextjsmongodb-fullstack-blog.vercel.app_ (2).png";
 
 const projects = [
+  {
+    title: "CRUD Blog",
+    desc: "A full-stack CRUD Blog built with Next.js and MongoDB enables users to create, read, update, and delete posts seamlessly. It features dynamic routing, server-side rendering, and a responsive UI backed by a scalable NoSQL database.",
+    name: "nextjs-fullstack-blog",
+    href: "nextjsmongodb-fullstack-blog.vercel.app",
+    github: "CRUDBlog-NextJSMongoDB",
+    img: crud,
+    carousel: [CRUD1, CRUD2, CRUD3],
+    type: ["Full Stack"],
+    frameworks: ["Next.js"],
+    database: ["MongoDB"],
+    tools: ["TailwindCSS"],
+    language: ["JavaScript"],
+  },
   {
     title: "Stock Predictor",
     desc: "A full-stack web application that fetches historical stock data, stores it in a database, and uses an LSTM (Long Short-Term Memory) deep learning model to predict future stock prices. Built with Flask for the backend, React for the frontend, and TensorFlow/Keras for the prediction logic.",
