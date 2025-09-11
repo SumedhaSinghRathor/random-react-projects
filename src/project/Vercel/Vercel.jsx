@@ -110,8 +110,16 @@ function Vercel() {
                 ? item
                 : item.name.toLowerCase().includes(search);
             })
-            .map((project) => (
-              <div className="flex justify-between items-center p-2 border border-black/30 rounded">
+            .map((project, index) => (
+              <div
+                key={index}
+                className={`flex justify-between items-center p-2 border border-black/30 rounded hover:bg-slate-500/20 cursor-pointer ${
+                  selectExtra === index ? "bg-slate-500/30" : ""
+                }`}
+                onClick={() =>
+                  setSelectExtra(selectExtra === index ? null : index)
+                }
+              >
                 <div className="flex items-center gap-4">
                   <img
                     src={project.img}
