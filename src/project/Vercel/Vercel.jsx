@@ -1,11 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import projects from "./projects.js";
 import Extra from "./Extra.jsx";
 
 function Vercel() {
-  const [grid, setGrid] = useState(true);
+  const [grid, setGrid] = useState(() => {
+    const saved = localStorage.getItem("gridView");
+    return saved ? JSON.parse(saved) : true;
+  });
   const [search, setSearch] = useState("");
   const [selectExtra, setSelectExtra] = useState(null);
+
+  useEffect(() => {
+    localStorage.setItem("gridView", JSON.stringify(grid));
+  }, [grid]);
 
   return (
     <section
@@ -64,6 +71,7 @@ function Vercel() {
                       <a
                         href={`https://${project.href}`}
                         target="_blank"
+                        rel="noreferrer"
                         className="hover:underline text-black/80 line-clamp-1"
                       >
                         {project.href}
@@ -74,6 +82,7 @@ function Vercel() {
                     <a
                       href={`https://github.dev/SumedhaSinghRathor/${project.github}`}
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <i className="bx bx-code-alt rounded-full hover:bg-slate-500/20" />
                     </a>
@@ -90,6 +99,7 @@ function Vercel() {
                 <a
                   href={`https://github.com/SumedhaSinghRathor/${project.github}`}
                   target="_blank"
+                  rel="noreferrer"
                   className="w-fit rounded-full"
                 >
                   <div className="bg-gray-300 w-fit max-w-full font-semibold flex items-center gap-2 px-2 rounded-full">
@@ -132,6 +142,7 @@ function Vercel() {
                       href={`https://${project.href}`}
                       target="_blank"
                       className="hover:underline text-black/80 line-clamp-1"
+                      rel="noreferrer"
                     >
                       {project.href}
                     </a>
@@ -140,6 +151,7 @@ function Vercel() {
                 <a
                   href={`https://github.com/SumedhaSinghRathor/${project.github}`}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <div className="flex gap-1 bg-gray-300 px-2 rounded-full font-semibold">
                     <i className="bx bxl-github text-2xl" />
