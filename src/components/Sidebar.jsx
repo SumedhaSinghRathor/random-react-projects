@@ -29,6 +29,10 @@ function Sidebar() {
       to: "/vercel",
       content: "Vercel Projects",
     },
+    {
+      to: "/nested-radius",
+      content: "Nested Radius",
+    },
   ];
 
   const [toggle, setToggle] = useState(false);

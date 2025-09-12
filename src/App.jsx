@@ -9,6 +9,7 @@ import TextoverHill from "./project/TextoverHill";
 import Link from "./components/Link";
 import Vercel from "./project/Vercel/Vercel";
 import MusicPlayer from "./project/Music Player/MusicPlayer";
+import NestedRadius from "./project/NestedRadius";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/stopwatch" element={<Stopwatch />}></Route>
         <Route path="/textoverhill" element={<TextoverHill />}></Route>
         <Route path="/vercel" element={<Vercel />}></Route>
+        <Route path="/nested-radius" element={<NestedRadius />} />
       </Routes>
     </>
   );
