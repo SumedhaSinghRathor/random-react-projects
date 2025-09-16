@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import projects from "./projects.js";
 import Extra from "./Extra.jsx";
+import Analysis from "./Analysis.jsx";
 
 function Vercel() {
   const [grid, setGrid] = useState(() => {
@@ -13,6 +14,8 @@ function Vercel() {
     const sortSaved = localStorage.getItem("sort");
     return sortSaved ? JSON.parse(sortSaved) : "none";
   });
+
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("gridView", JSON.stringify(grid));
@@ -55,7 +58,7 @@ function Vercel() {
           onChange={(e) => setSearch(e.target.value)}
         />
         <i
-          className={`bx border border-black/30 p-2 rounded ${
+          className={`bx border border-black/30 p-2 rounded cursor-pointer ${
             sortConfig === "asc"
               ? "bx-sort-a-z text-white bg-black"
               : sortConfig === "desc"
@@ -68,20 +71,24 @@ function Vercel() {
         <div className="flex items-center p-1 border border-black/30 rounded">
           <i
             className={`bx bxs-grid-alt p-1 rounded transition-colors ${
-              grid ? "bg-black/20" : ""
+              grid ? "bg-black/20" : "cursor-pointer"
             }`}
             onClick={() => setGrid(true)}
           />
           <i
             className={`bx bx-list-ul p-1 rounded transition-colors ${
-              grid ? "" : "bg-black/20"
+              grid ? "cursor-pointer" : "bg-black/20"
             }`}
             onClick={() => setGrid(false)}
           />
         </div>
-        <div className="text-lg bg-black text-white py-1.5 px-3 rounded font-semibold cursor-pointer">
+        <div
+          onClick={() => setShowModal(true)}
+          className="text-lg bg-black text-white py-1.5 px-3 rounded font-semibold cursor-pointer select-none"
+        >
           Analysis
         </div>
+        {showModal && <Analysis onClose={() => setShowModal(false)} />}
       </form>
       {grid ? (
         // Grid View

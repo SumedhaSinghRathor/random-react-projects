@@ -67,8 +67,9 @@ function Sidebar() {
       </Link>
       <ul className="h-full">
         {projects.map((project) => (
-          <Link to={project.to}>
+          <Link to={project.to} key={project.content}>
             <li
+              key={project.content}
               className="p-2 rounded-lg hover:bg-white/20"
               onClick={() => setToggle(false)}
             >
