@@ -59,7 +59,7 @@ const projects = [
     type: ["Full Stack"],
     frameworks: ["Next.js"],
     database: ["MongoDB"],
-    tools: ["TailwindCSS"],
+    tools: ["Tailwind CSS"],
     language: ["JavaScript"],
   },
   {
