@@ -101,7 +101,7 @@ const projects = [
     type: ["Front End"],
     frameworks: ["React.js"],
     database: [],
-    tools: ["Tailwind CSS", "Framer-Motion"],
+    tools: ["Tailwind CSS", "Framer Motion"],
     language: ["JavaScript"],
   },
   {
