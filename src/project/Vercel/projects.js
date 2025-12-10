@@ -9,6 +9,7 @@ import tvs from "./assets/tvs.ico";
 import nkd from "./assets/nkd.ico";
 import quiz from "./assets/quiz.ico";
 import crud from "./assets/CRUD.ico";
+import comic from "./assets/comic.png";
 import SP1 from "./assets/thumbnails/Stock Predictor 1.png";
 import SP2 from "./assets/thumbnails/Stock Predictor 2.png";
 import SP3 from "./assets/thumbnails/Stock Predictor 3.png";
@@ -46,6 +47,15 @@ import NKD5 from "./assets/thumbnails/notes-ki-dukaan.vercel.app_user.png";
 import CRUD1 from "./assets/thumbnails/nextjsmongodb-fullstack-blog.vercel.app_.png";
 import CRUD2 from "./assets/thumbnails/nextjsmongodb-fullstack-blog.vercel.app_ (1).png";
 import CRUD3 from "./assets/thumbnails/nextjsmongodb-fullstack-blog.vercel.app_ (2).png";
+import WIS1 from "./assets/thumbnails/what-is-shoujo.vercel.app_.png";
+import WIS2 from "./assets/thumbnails/what-is-shoujo.vercel.app_ (1).png";
+import WIS3 from "./assets/thumbnails/what-is-shoujo.vercel.app_ (2).png";
+import WIS4 from "./assets/thumbnails/what-is-shoujo.vercel.app_ (3).png";
+import WIS5 from "./assets/thumbnails/what-is-shoujo.vercel.app_ (4).png";
+import WIS6 from "./assets/thumbnails/what-is-shoujo.vercel.app_ (5).png";
+import WIS7 from "./assets/thumbnails/what-is-shoujo.vercel.app_ (6).png";
+import WIS8 from "./assets/thumbnails/what-is-shoujo.vercel.app_ (7).png";
+import WIS9 from "./assets/thumbnails/what-is-shoujo.vercel.app_ (8).png";
 
 const projects = [
   {
@@ -60,6 +70,20 @@ const projects = [
     frameworks: ["Next.js"],
     database: ["MongoDB"],
     tools: ["Tailwind CSS"],
+    language: ["JavaScript"],
+  },
+  {
+    title: "What Is Shoujo?",
+    desc: "What-is-Shoujo? is MERN stack web app that serves as a searchable database for Shoujo manga (demographic aimed at young women) with genre filters. It also acts as a personal reading tracker, letting users log progress, manage lists, and view detailed info.",
+    name: "what-is-shoujo",
+    href: "what-is-shoujo.vercel.app",
+    github: "what-is-shoujo",
+    img: comic,
+    carousel: [WIS1, WIS2, WIS3, WIS4, WIS5, WIS6, WIS7, WIS8, WIS9],
+    type: ["Full Stack", "MERN Stack"],
+    frameworks: ["React.js", "Express.js", "Node.js"],
+    database: ["MongoDB"],
+    tools: ["Tailwind CSS", "Chart.js"],
     language: ["JavaScript"],
   },
   {
@@ -120,6 +144,7 @@ const projects = [
   {
     title: "My Personal Portfolio",
     name: "personal-portfolio",
+    desc: "Contains the the code and necessary items used in the portfolio. This website is made using only React.js (using the GSAP library for animations).",
     href: "sumedhasinghrathor.vercel.app",
     github: "personal-portfolio",
     img: ssr,
@@ -178,7 +203,7 @@ const projects = [
     github: "notes-ki-dukaan",
     img: nkd,
     carousel: [NKD1, NKD2, NKD3, NKD4, NKD5],
-    type: ["Full Stack"],
+    type: ["Full Stack", "UX Case Study", "UI Prototype"],
     frameworks: ["React.js", "Spring Boot"],
     database: ["MongoDB"],
     tools: ["Tailwind CSS"],
