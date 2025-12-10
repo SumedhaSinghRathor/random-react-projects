@@ -130,7 +130,7 @@ function Vercel() {
                       selectExtra === index ? "bg-slate-500/40" : ""
                     }`}
                     onClick={() =>
-                      setSelectExtra(selectExtra === index ? null : index)
+                      setSelectExtra(selectExtra === project ? null : project)
                     }
                   />
                 </div>
@@ -161,7 +161,7 @@ function Vercel() {
                 selectExtra === index ? "bg-slate-500/30" : ""
               }`}
               onClick={() =>
-                setSelectExtra(selectExtra === index ? null : index)
+                setSelectExtra(selectExtra === project ? null : project)
               }
             >
               <div className="flex items-center gap-4">
@@ -192,10 +192,7 @@ function Vercel() {
           ))}
         </section>
       )}
-      <Extra
-        selectExtra={selectExtra === null ? null : projects[selectExtra]}
-        onClose={() => setSelectExtra(null)}
-      />
+      <Extra selectExtra={selectExtra} onClose={() => setSelectExtra(null)} />
     </section>
   );
 }
