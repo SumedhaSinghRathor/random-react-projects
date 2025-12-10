@@ -1,0 +1,15 @@
+.misc {
+  background-color: #8f7c6e;
+}
+
+.number {
+  background-color: #f55346;
+}
+
+.operation {
+  background-color: #6b859e;
+}
+
+button:active {
+  opacity: 0.45;
+}

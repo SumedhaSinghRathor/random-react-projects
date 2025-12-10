@@ -33,13 +33,17 @@ function Sidebar() {
       to: "/nested-radius",
       content: "Nested Radius",
     },
+    {
+      to: "/calculator",
+      content: "Calculator",
+    },
   ];
 
   const [toggle, setToggle] = useState(false);
 
   return (
     <aside
-      className={`fixed w-3xs h-full flex flex-col gap-4 bg-blue-700 p-4 text-white rounded-r-lg transition-transform shadow-2xl ${
+      className={`fixed w-3xs h-full flex flex-col gap-4 bg-blue-700 p-4 text-white rounded-r-lg transition-transform shadow-2xl z-100 ${
         toggle ? "translate-x-0" : "-translate-x-64"
       }`}
     >
@@ -66,17 +70,19 @@ function Sidebar() {
         <h1 className="text-lg font-bold leading-6">Mini React Projects</h1>
       </Link>
       <ul className="h-full">
-        {projects.map((project) => (
-          <Link to={project.to} key={project.content}>
-            <li
-              key={project.content}
-              className="p-2 rounded-lg hover:bg-white/20"
-              onClick={() => setToggle(false)}
-            >
-              {project.content}
-            </li>
-          </Link>
-        ))}
+        {projects
+          .sort((a, b) => a.content.localeCompare(b.content))
+          .map((project) => (
+            <Link to={project.to} key={project.content}>
+              <li
+                key={project.content}
+                className="p-2 rounded-lg hover:bg-white/20"
+                onClick={() => setToggle(false)}
+              >
+                {project.content}
+              </li>
+            </Link>
+          ))}
       </ul>
     </aside>
   );
