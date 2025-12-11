@@ -11,6 +11,7 @@ import Vercel from "./project/Vercel/Vercel";
 import MusicPlayer from "./project/Music Player/MusicPlayer";
 import NestedRadius from "./project/NestedRadius";
 import Calculator from "./project/Calculator/Calculator";
+import KanbanBoard from "./project/Kanban Board/KanbanBoard";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/vercel" element={<Vercel />}></Route>
         <Route path="/nested-radius" element={<NestedRadius />} />
         <Route path="/calculator" element={<Calculator />} />
+        <Route path="/kanban-board" element={<KanbanBoard />} />
       </Routes>
     </>
   );

@@ -37,6 +37,10 @@ function Sidebar() {
       to: "/calculator",
       content: "Calculator",
     },
+    {
+      to: "/kanban-board",
+      content: "Kanban Board",
+    },
   ];
 
   const [toggle, setToggle] = useState(false);
