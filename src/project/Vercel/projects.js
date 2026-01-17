@@ -15,10 +15,8 @@ import SP2 from "./assets/thumbnails/Stock Predictor 2.png";
 import SP3 from "./assets/thumbnails/Stock Predictor 3.png";
 import SP4 from "./assets/thumbnails/Stock Predictor 4.png";
 import SP5 from "./assets/thumbnails/Stock Predictor 5.png";
-import QS1 from "./assets/thumbnails/quantasight.vercel.app_.png";
-import QS2 from "./assets/thumbnails/quantasight.vercel.app_ (1).png";
-import QS3 from "./assets/thumbnails/quantasight.vercel.app_ (2).png";
-import QS4 from "./assets/thumbnails/quantasight.vercel.app_ (3).png";
+import QS1 from "./assets/thumbnails/quantasight.vercel.app_xtract (1).png";
+import QS2 from "./assets/thumbnails/quantasight.vercel.app_xtract.png";
 import RRP1 from "./assets/thumbnails/random-react-projects.vercel.app_.png";
 import RRP2 from "./assets/thumbnails/random-react-projects.vercel.app_ (1).png";
 import RRP3 from "./assets/thumbnails/random-react-projects.vercel.app_ (2).png";
@@ -26,6 +24,10 @@ import RRP4 from "./assets/thumbnails/random-react-projects.vercel.app_ (3).png"
 import RRP5 from "./assets/thumbnails/random-react-projects.vercel.app_ (4).png";
 import RRP6 from "./assets/thumbnails/random-react-projects.vercel.app_textoverhill.png";
 import RRP7 from "./assets/thumbnails/random-react-projects.vercel.app_textoverhill (1).png";
+import RRP8 from "./assets/thumbnails/random-react-projects.vercel.app_calculator.png";
+import RRP9 from "./assets/thumbnails/random-react-projects.vercel.app_kanban-board.png";
+import RRP10 from "./assets/thumbnails/random-react-projects.vercel.app_nested-radius.png";
+import RRP11 from "./assets/thumbnails/random-react-projects.vercel.app_stopwatch.png";
 import PP1 from "./assets/thumbnails/sumedhasinghrathor.vercel.app_.png";
 import PP2 from "./assets/thumbnails/sumedhasinghrathor.vercel.app_ (1).png";
 import PP3 from "./assets/thumbnails/sumedhasinghrathor.vercel.app_ (2).png";
@@ -105,9 +107,9 @@ const projects = [
     desc: "A medical dashboard for visualizing medical data, built with React. It is a front-end application that allows users to explore and analyze medical datasets.",
     name: "quantasight",
     href: "quantasight.vercel.app",
-    github: "QuantSight",
+    github: "QuantaSight",
     img: quant,
-    carousel: [QS1, QS2, QS3, QS4],
+    carousel: [QS1, QS2],
     type: ["Front End"],
     frameworks: ["React.js"],
     database: [],
@@ -121,7 +123,19 @@ const projects = [
     href: "random-react-projects.vercel.app",
     github: "random-react-projects",
     img: react,
-    carousel: [RRP1, RRP2, RRP3, RRP4, RRP5, RRP6, RRP7],
+    carousel: [
+      RRP1,
+      RRP2,
+      RRP3,
+      RRP4,
+      RRP5,
+      RRP6,
+      RRP7,
+      RRP8,
+      RRP9,
+      RRP10,
+      RRP11,
+    ],
     type: ["Front End"],
     frameworks: ["React.js"],
     database: [],
