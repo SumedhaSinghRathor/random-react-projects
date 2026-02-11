@@ -3,6 +3,8 @@ import { useState } from "react";
 function PixelPilot() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
+  const [openSidebar, setOpenSidebar] = useState(false);
+  const [fileNames, setFileNames] = useState([]);
 
   const sendMessage = async () => {
     if (!input.trim()) return;
@@ -26,11 +28,56 @@ function PixelPilot() {
     }, 1000);
   };
 
+  const handleFileChange = (e) => {
+    const files = Array.from(e.target.files);
+    const names = files.map((file) => file.name);
+    setFileNames(names);
+  };
+
+  const removeFile = (index) => {
+    setFileNames((prev) => prev.filter((_, i) => i !== index));
+  };
+
   return (
     <div
       className="bg-[#611c47] flex p-5 h-[100vh]"
       style={{ fontFamily: "Instrument Sans" }}
     >
+      <div
+        className={
+          openSidebar
+            ? "mr-2.5 w-45 py-5 px-2.5 flex flex-col gap-2.5 justify-end text-[#fdecea]"
+            : "hidden"
+        }
+      >
+        <div>
+          <h3 className="text-sm font-semibold">Today</h3>
+          <div className="p-2.5 truncate hover:bg-[#fdecea]/10 rounded cursor-pointer">
+            Fake News Detection
+          </div>
+        </div>
+        <div>
+          <h3 className="text-sm font-semibold">Yesterday</h3>
+          <div className="p-2.5 truncate hover:bg-[#fdecea]/10 rounded cursor-pointer">
+            ATS Resume Optimization Tips
+          </div>
+          <div className="p-2.5 truncate hover:bg-[#fdecea]/10 rounded cursor-pointer">
+            Pseudocode Output Explanation
+          </div>
+        </div>
+        <div>
+          <h3 className="text-sm font-semibold">Last Week</h3>
+          <div className="p-2.5 truncate hover:bg-[#fdecea]/10 rounded cursor-pointer">
+            DHT Node Location Calcuation
+          </div>
+          <div className="p-2.5 truncate hover:bg-[#fdecea]/10 rounded cursor-pointer">
+            SAP benefits GAIL
+          </div>
+          <div className="p-2.5 truncate hover:bg-[#fdecea]/10 rounded cursor-pointer">
+            Short-Run Production Analysis
+          </div>
+        </div>
+      </div>
       <div className="bg-[#fdecea] text-[#611c47] w-full rounded-2xl px-15 py-7.5 flex flex-col gap-2.5 items-center">
         <div
           className="grow text-start w-full flex flex-col gap-2 overflow-y-scroll"
@@ -52,7 +99,22 @@ function PixelPilot() {
           )}
         </div>
         <div className="px-5 py-1.25 bg-[#611c47] text-[#fdecea] rounded-lg w-full flex flex-col gap-1.5">
-          {/* <div className="">Here goes the attached files</div> */}
+          {fileNames.length > 0 && (
+            <div className="flex gap-2">
+              {fileNames.map((f, i) => (
+                <div
+                  key={f + "-" + i}
+                  className="w-30 truncate border text-xs flex items-center bg-[#fdecea] text-[#611c47] p-1 rounded"
+                >
+                  <p className="font-bold truncate">{f}</p>
+                  <i
+                    className="bx bx-x text-base"
+                    onClick={() => removeFile(i)}
+                  />
+                </div>
+              ))}
+            </div>
+          )}
           <div className="flex items-center gap-3 w-full">
             <div className="hover:bg-[#fdecea]/30 flex justify-center items-center p-1 rounded">
               <i
@@ -60,7 +122,13 @@ function PixelPilot() {
                 onClick={() => document.getElementById("input-field").click()}
                 title="Attach files"
               />
-              <input type="file" name="" id="input-field" hidden className="" />
+              <input
+                type="file"
+                onChange={handleFileChange}
+                multiple
+                id="input-field"
+                hidden
+              />
             </div>
             <input
               type="text"
@@ -77,6 +145,7 @@ function PixelPilot() {
             <i
               className="text-2xl bx bx-plus hover:bg-[#fdecea]/30 p-1 rounded"
               title="New Chat"
+              onClick={() => setOpenSidebar(!openSidebar)}
             />
           </div>
         </div>
