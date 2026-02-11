@@ -41,6 +41,11 @@ function Sidebar() {
       to: "/kanban-board",
       content: "Kanban Board",
     },
+    ,
+    {
+      to: "/pixelpilot",
+      content: "Pixel Pilot",
+    },
   ];
 
   const [toggle, setToggle] = useState(false);

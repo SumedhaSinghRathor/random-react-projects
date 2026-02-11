@@ -12,6 +12,7 @@ import MusicPlayer from "./project/Music Player/MusicPlayer";
 import NestedRadius from "./project/NestedRadius";
 import Calculator from "./project/Calculator/Calculator";
 import KanbanBoard from "./project/Kanban Board/KanbanBoard";
+import PixelPilot from "./project/PixelPilot/PixelPilot";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/nested-radius" element={<NestedRadius />} />
         <Route path="/calculator" element={<Calculator />} />
         <Route path="/kanban-board" element={<KanbanBoard />} />
+        <Route path="/pixelpilot" element={<PixelPilot />} />
       </Routes>
     </>
   );
