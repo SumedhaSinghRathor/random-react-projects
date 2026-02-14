@@ -31,12 +31,12 @@ function Extra({ selectExtra, onClose }) {
         <div className="flex flex-col gap-1 self-end">
           {Object.keys(selectExtra || {})
             .filter(
-              (key) => Array.isArray(selectExtra[key]) && key !== "carousel" // ✅ exclude carousel
+              (key) => Array.isArray(selectExtra[key]) && key !== "carousel",
             )
             .map((key) => (
               <div key={key} className="flex items-center gap-2 flex-wrap">
                 <span className="font-semibold capitalize text-sm">{key}:</span>
-                {selectExtra[key].map((item, i) => (
+                {selectExtra[key]?.map((item, i) => (
                   <div
                     key={i}
                     className="text-xs bg-cyan-100 px-2 py-0.5 text-blue-500 rounded-full font-semibold hover:text-white hover:bg-blue-500 cursor-pointer"

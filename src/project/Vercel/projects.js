@@ -10,6 +10,7 @@ import nkd from "./assets/nkd.ico";
 import quiz from "./assets/quiz.ico";
 import crud from "./assets/CRUD.ico";
 import comic from "./assets/comic.png";
+import analysis from "./assets/image.png";
 import SP1 from "./assets/thumbnails/Stock Predictor 1.png";
 import SP2 from "./assets/thumbnails/Stock Predictor 2.png";
 import SP3 from "./assets/thumbnails/Stock Predictor 3.png";
@@ -58,8 +59,26 @@ import WIS6 from "./assets/thumbnails/what-is-shoujo.vercel.app_ (5).png";
 import WIS7 from "./assets/thumbnails/what-is-shoujo.vercel.app_ (6).png";
 import WIS8 from "./assets/thumbnails/what-is-shoujo.vercel.app_ (7).png";
 import WIS9 from "./assets/thumbnails/what-is-shoujo.vercel.app_ (8).png";
+import analysis1 from "./assets/thumbnails/read-analysis.png";
+import analysis2 from "./assets/thumbnails/read-analysis (1).png";
+import analysis3 from "./assets/thumbnails/read-analysis (2).png";
+import analysis4 from "./assets/thumbnails/read-analysis (3).png";
 
 const projects = [
+  {
+    title: "Reads Analysis",
+    desc: "A graphical representation of the analysis of the all the books I have read from 2020 to present date",
+    name: "read-analysis",
+    href: "read-analysis.vercel.app",
+    github: "read-analysis",
+    img: analysis,
+    carousel: [analysis1, analysis2, analysis3, analysis4],
+    type: ["Full Stack"],
+    frameworks: ["React.js", "Flask"],
+    database: ["PostgreSQL"],
+    tools: ["Tailwind CSS"],
+    language: ["JavaScript", "Python"],
+  },
   {
     title: "CRUD Blog",
     desc: "A full-stack CRUD Blog built with Next.js and MongoDB enables users to create, read, update, and delete posts seamlessly. It features dynamic routing, server-side rendering, and a responsive UI backed by a scalable NoSQL database.",
@@ -112,7 +131,6 @@ const projects = [
     carousel: [QS1, QS2],
     type: ["Front End"],
     frameworks: ["React.js"],
-    database: [],
     tools: ["Tailwind CSS"],
     language: ["JavaScript"],
   },
@@ -138,7 +156,6 @@ const projects = [
     ],
     type: ["Front End"],
     frameworks: ["React.js"],
-    database: [],
     tools: ["Tailwind CSS", "Framer Motion"],
     language: ["JavaScript"],
   },
@@ -151,7 +168,6 @@ const projects = [
     img: player,
     type: ["Front End"],
     frameworks: ["React.js"],
-    database: [],
     tools: ["Tailwind CSS", "Framer Motion"],
     language: ["TypeScript"],
   },
@@ -165,7 +181,6 @@ const projects = [
     carousel: [PP1, PP2, PP3, PP4, PP5, PP6, PP7],
     type: ["Front End"],
     frameworks: ["React.js"],
-    database: [],
     tools: ["Tailwind CSS", "Chart.js", "GSAP"],
     language: ["JavaScript"],
   },
@@ -178,7 +193,6 @@ const projects = [
     carousel: [PP],
     type: ["Chatbot"],
     frameworks: ["React.js"],
-    database: [],
     tools: ["Tailwind CSS"],
     language: ["JavaScript", "Python"],
   },
@@ -192,7 +206,6 @@ const projects = [
     carousel: [WD],
     type: ["Front End"],
     frameworks: ["React.js"],
-    database: [],
     tools: ["Tailwind CSS"],
     language: ["JavaScript"],
   },
@@ -205,7 +218,6 @@ const projects = [
     carousel: [FTS1, FTS2, FTS3, FTS4],
     type: ["Front End"],
     frameworks: ["Next.js"],
-    database: [],
     tools: ["Tailwind CSS"],
     language: ["JavaScript"],
   },

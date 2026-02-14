@@ -27,7 +27,7 @@ function Vercel() {
 
   const toggleSort = () => {
     setSortConfig((prev) =>
-      prev === "none" ? "asc" : prev === "asc" ? "desc" : "none"
+      prev === "none" ? "asc" : prev === "asc" ? "desc" : "none",
     );
   };
 
@@ -35,7 +35,7 @@ function Vercel() {
     .filter((item) =>
       search.toLowerCase() === ""
         ? item
-        : item.name.toLowerCase().includes(search.toLowerCase())
+        : item.name.toLowerCase().includes(search.toLowerCase()),
     )
     .slice()
     .sort((a, b) => {
@@ -51,8 +51,9 @@ function Vercel() {
     >
       <h1 className="text-4xl text-center font-bold">Potential Projects</h1>
       <br />
-      <form className="w-full flex items-center gap-4 p-2 text-2xl">
+      <div className="w-full flex items-center gap-4 p-2 text-2xl">
         <input
+          name="search"
           type="text"
           className="focus:outline-none px-2 py-1.5 text-end rounded border-1 border-black/30 text-xl grow"
           onChange={(e) => setSearch(e.target.value)}
@@ -74,22 +75,25 @@ function Vercel() {
               grid ? "bg-black/20" : "cursor-pointer"
             }`}
             onClick={() => setGrid(true)}
+            title="View: Grid"
           />
           <i
             className={`bx bx-list-ul p-1 rounded transition-colors ${
               grid ? "cursor-pointer" : "bg-black/20"
             }`}
             onClick={() => setGrid(false)}
+            title="View: List"
           />
         </div>
-        <div
+        <button
           onClick={() => setShowModal(true)}
           className="text-lg bg-black text-white py-1.5 px-3 rounded font-semibold cursor-pointer select-none"
+          title="Graphical Analysis"
         >
           Analysis
-        </div>
+        </button>
         {showModal && <Analysis onClose={() => setShowModal(false)} />}
-      </form>
+      </div>
       {grid ? (
         // Grid View
         <section className="grid grid-cols-3 gap-4 p-2">
