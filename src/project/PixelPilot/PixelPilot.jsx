@@ -8,6 +8,7 @@ function PixelPilot() {
 
   const sendMessage = async () => {
     if (!input.trim()) return;
+    const hasCode = input.trim().toLowerCase().includes("code");
 
     const userMsg = {
       role: "user",
@@ -20,8 +21,35 @@ function PixelPilot() {
     setTimeout(() => {
       const aiMsg = {
         role: "assistant",
-        content:
-          "This response comes from AI. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed eum maiores in animi quam accusamus perspiciatis reprehenderit similique delectus, excepturi, voluptate itaque culpa harum ipsam vel repellat error ea esse!",
+        content: (
+          <div className="flex flex-col gap-5">
+            <p className="w-full">
+              This response comes from AI. Lorem ipsum dolor, sit amet
+              consectetur adipisicing elit. Sed eum maiores in animi quam
+              accusamus perspiciatis reprehenderit similique delectus,
+              excepturi, voluptate itaque culpa harum ipsam vel repellat error
+              ea esse!
+            </p>
+            {hasCode ? (
+              <code className="w-3/5 bg-[#611c47] text-[#fdecea] self-center p-4 rounded-2xl flex flex-col gap-2.5">
+                <div className="flex items-center w-full justify-between">
+                  <div className="lang font-bold">Python</div>
+                  <button
+                    style={{ fontFamily: "Instrument Sans" }}
+                    className="flex py-1 px-2 gap-2 items-center rounded-lg border border-[#fdecea]/70 bg-[#fdecea]/10"
+                  >
+                    <i class="bx bxs-copy" />
+                    Copy
+                  </button>
+                </div>
+                <hr />
+                Something goes here as well
+              </code>
+            ) : (
+              ""
+            )}
+          </div>
+        ),
       };
 
       setMessages((prev) => [...prev, aiMsg]);
