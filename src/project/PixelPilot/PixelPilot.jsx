@@ -13,10 +13,12 @@ function PixelPilot() {
     const userMsg = {
       role: "user",
       content: input,
+      attachments: fileNames,
     };
 
     setMessages((prev) => [...prev, userMsg]);
     setInput("");
+    setFileNames([]);
 
     setTimeout(() => {
       const aiMsg = {
@@ -117,11 +119,24 @@ function PixelPilot() {
             </h1>
           ) : (
             messages.map((msg, i) => (
-              <div
-                key={i}
-                className={`${msg.role === "user" ? "bg-[#611c47] text-[#fdecea] w-fit max-w-4/5 h-fit self-end px-4 py-1 rounded-lg text-start" : ""}`}
-              >
-                {msg.content}
+              <div key={i} className="self-end flex flex-col items-end gap-1">
+                <div
+                  className={`${msg.role === "user" ? "bg-[#611c47] text-[#fdecea] w-fit max-w-4/5 h-fit px-4 py-1 rounded-lg" : ""}`}
+                >
+                  {msg.content}
+                </div>
+                {msg.attachments && (
+                  <div className="text-xs flex gap-1">
+                    {msg.attachments.map((m, i) => (
+                      <div
+                        key={i}
+                        className="px-2 max-w-30 w-fit rounded-full bg-[#611c47]/20 truncate"
+                      >
+                        {m}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             ))
           )}
