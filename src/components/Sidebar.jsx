@@ -41,10 +41,13 @@ function Sidebar() {
       to: "/kanban-board",
       content: "Kanban Board",
     },
-    ,
     {
       to: "/pixelpilot",
       content: "Pixel Pilot",
+    },
+    {
+      to: "/projects-timeline",
+      content: "Projects Timeline",
     },
   ];
 
