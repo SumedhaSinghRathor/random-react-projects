@@ -121,7 +121,7 @@ function KanbanBoard() {
         </button>
       </div>
 
-      <div className="mt-4 gap-3 grid grid-cols-5">
+      <div className="my-4 gap-3 grid grid-cols-5">
         {Object.keys(columns).map((columnId) => (
           <div
             key={columnId}
