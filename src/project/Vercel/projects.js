@@ -37,6 +37,9 @@ import PP5 from "./assets/thumbnails/sumedhasinghrathor.vercel.app_ (4).png";
 import PP6 from "./assets/thumbnails/sumedhasinghrathor.vercel.app_ (5).png";
 import PP7 from "./assets/thumbnails/sumedhasinghrathor.vercel.app_ (6).png";
 import WD from "./assets/thumbnails/sumedhasinghrathor-weatherdashboard.vercel.app_.png";
+import WD1 from "./assets/thumbnails/sumedhasinghrathor-weatherdashboard.vercel.app_ (1).png";
+import WD2 from "./assets/thumbnails/sumedhasinghrathor-weatherdashboard.vercel.app_ (2).png";
+import WD3 from "./assets/thumbnails/sumedhasinghrathor-weatherdashboard.vercel.app_ (3).png";
 import FTS1 from "./assets/thumbnails/fetch-tv-shows.vercel.app_.png";
 import FTS2 from "./assets/thumbnails/fetch-tv-shows.vercel.app_ (1).png";
 import FTS3 from "./assets/thumbnails/fetch-tv-shows.vercel.app_ (2).png";
@@ -203,7 +206,7 @@ const projects = [
     href: "sumedhasinghrathor-weatherdashboard.vercel.app",
     github: "WeatherApp",
     img: cloud,
-    carousel: [WD],
+    carousel: [WD, WD1, WD2, WD3],
     type: ["Front End"],
     frameworks: ["React.js"],
     tools: ["Tailwind CSS"],
