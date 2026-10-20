@@ -14,6 +14,7 @@ import Calculator from "./project/Calculator/Calculator";
 import KanbanBoard from "./project/Kanban Board/KanbanBoard";
 import PixelPilot from "./project/PixelPilot/PixelPilot";
 import Projects from "./project/Projects";
+import Reads from "./project/Reads/Reads";
 
 function App() {
   return (
@@ -21,14 +22,15 @@ function App() {
       <Sidebar />
       <Link />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/counter" element={<Counter />}></Route>
-        <Route path="/creditcard" element={<CreditCard />}></Route>
-        <Route path="/fav" element={<Fav />}></Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/counter" element={<Counter />} />
+        <Route path="/creditcard" element={<CreditCard />} />
+        <Route path="/fav" element={<Fav />} />
         <Route path="/music-player" element={<MusicPlayer />} />
-        <Route path="/stopwatch" element={<Stopwatch />}></Route>
-        <Route path="/textoverhill" element={<TextoverHill />}></Route>
-        <Route path="/vercel" element={<Vercel />}></Route>
+        <Route path="/stopwatch" element={<Stopwatch />} />
+        <Route path="/textoverhill" element={<TextoverHill />} />
+        <Route path="/vercel" element={<Vercel />} />
+        <Route path="/manga-reads" element={<Reads />} />
         <Route path="/nested-radius" element={<NestedRadius />} />
         <Route path="/calculator" element={<Calculator />} />
         <Route path="/kanban-board" element={<KanbanBoard />} />

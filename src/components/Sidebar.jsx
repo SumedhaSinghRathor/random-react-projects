@@ -49,6 +49,10 @@ function Sidebar() {
       to: "/projects-timeline",
       content: "Projects Timeline",
     },
+    {
+      to: "/manga-reads",
+      content: "Manga Reads",
+    },
   ];
 
   const [toggle, setToggle] = useState(false);
@@ -81,7 +85,7 @@ function Sidebar() {
         <img src={logo} alt="react logo" className="size-12 shrink-0" />
         <h1 className="text-lg font-bold leading-6">Mini React Projects</h1>
       </Link>
-      <ul className="h-full">
+      <ul className="grow overflow-scroll" style={{ scrollbarWidth: "none" }}>
         {projects
           .sort((a, b) => a.content.localeCompare(b.content))
           .map((project) => (
