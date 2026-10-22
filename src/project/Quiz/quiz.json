@@ -1,0 +1,115 @@
+{
+  "quizTitle": "React Quiz",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is React?",
+      "options": [
+        "A JavaScript library for building user interfaces",
+        "A database management system",
+        "A CSS framework",
+        "A server operating system"
+      ],
+      "answer": "A JavaScript library for building user interfaces"
+    },
+    {
+      "id": 2,
+      "question": "What is JSX in React?",
+      "options": [
+        "A database query language",
+        "A syntax extension that lets you write HTML-like markup in JavaScript",
+        "A CSS preprocessor",
+        "A JavaScript testing framework"
+      ],
+      "answer": "A syntax extension that lets you write HTML-like markup in JavaScript"
+    },
+    {
+      "id": 3,
+      "question": "Which function is used to create a functional component in React?",
+      "options": [
+        "createElementOnly()",
+        "buildComponent()",
+        "A JavaScript function that returns JSX",
+        "renderComponent()"
+      ],
+      "answer": "A JavaScript function that returns JSX"
+    },
+    {
+      "id": 4,
+      "question": "What are props in React?",
+      "options": [
+        "Variables used only for styling",
+        "Inputs passed from a parent component to a child component",
+        "Functions that update the DOM directly",
+        "A method for storing data in a database"
+      ],
+      "answer": "Inputs passed from a parent component to a child component"
+    },
+    {
+      "id": 5,
+      "question": "Which React hook is used to add state to a functional component?",
+      "options": [
+        "useEffect",
+        "useContext",
+        "useState",
+        "useRef"
+      ],
+      "answer": "useState"
+    },
+    {
+      "id": 6,
+      "question": "What is the purpose of the useEffect hook?",
+      "options": [
+        "To manage side effects in a component",
+        "To create CSS classes",
+        "To define component props",
+        "To replace JSX"
+      ],
+      "answer": "To manage side effects in a component"
+    },
+    {
+      "id": 7,
+      "question": "How do you pass a click event handler to a button in JSX?",
+      "options": [
+        "onclick=\"handleClick()\"",
+        "click={handleClick}",
+        "onClick={handleClick}",
+        "on-click={handleClick}"
+      ],
+      "answer": "onClick={handleClick}"
+    },
+    {
+      "id": 8,
+      "question": "Why is the key prop used when rendering lists in React?",
+      "options": [
+        "To apply CSS styles to list items",
+        "To help React identify items between renders",
+        "To sort items automatically",
+        "To prevent components from receiving props"
+      ],
+      "answer": "To help React identify items between renders"
+    },
+    {
+      "id": 9,
+      "question": "Which statement about React state is correct?",
+      "options": [
+        "State can only store strings",
+        "State updates always happen synchronously",
+        "State is used to store data that can change over time",
+        "State cannot affect what a component renders"
+      ],
+      "answer": "State is used to store data that can change over time"
+    },
+    {
+      "id": 10,
+      "question": "What does the useContext hook help a component do?",
+      "options": [
+        "Access values provided by a React context",
+        "Create a new HTML element",
+        "Update browser cookies automatically",
+        "Compile JSX into CSS"
+      ],
+      "answer": "Access values provided by a React context"
+    }
+  ]
+}

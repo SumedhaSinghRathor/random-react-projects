@@ -15,6 +15,7 @@ import KanbanBoard from "./project/Kanban Board/KanbanBoard";
 import PixelPilot from "./project/PixelPilot/PixelPilot";
 import Projects from "./project/Projects";
 import Reads from "./project/Reads/Reads";
+import Quiz from "./project/Quiz/Quiz";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/kanban-board" element={<KanbanBoard />} />
         <Route path="/pixelpilot" element={<PixelPilot />} />
         <Route path="/projects-timeline" element={<Projects />} />
+        <Route path="/quiz" element={<Quiz />} />
       </Routes>
     </>
   );

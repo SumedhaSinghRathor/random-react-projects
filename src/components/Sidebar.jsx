@@ -53,6 +53,10 @@ function Sidebar() {
       to: "/manga-reads",
       content: "Manga Reads",
     },
+    {
+      to: "/quiz",
+      content: "React Quiz",
+    },
   ];
 
   const [toggle, setToggle] = useState(false);
